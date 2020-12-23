@@ -1,0 +1,22 @@
+<h1>Recovered</h1>
+
+<table>
+  <thead>
+    <td>Paises</td>
+    <td>Cidades</td>
+    <td>Recuperados</td>
+    <td>Última atualização</td>
+  </thead>
+  <tbody>
+    <% @recovered.each do |rec| %>
+    <tr>
+      <td><%=rec['countryRegion'] %></td>
+      <td><%=rec['provinceState'] %></td>
+      <td><%=rec['confirmed'] %></td>
+      <td><%=Time.at(rec['lastUpdate'].to_i/1000).strftime('%d/%m/%y - %H:%M:%S') %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

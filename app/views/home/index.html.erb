@@ -1,5 +1,53 @@
-<h1>Dados atualizado do covid19</h1>
+<style>
+body{
+  background-color: #001;
+}
+h1{
+  text-align: center;
+  color: #fff;
+  font-size: 70px;
+}
+.card {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 35px;
+  color: #001;
+}
+span {
+  font-size: 25px;
+  color: #5F5E5F;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  width: 150px;
+}
+</style>
+<div>
+  <h1>Dados atualizado do covid19</h1>
+  <div class="container">
+    <div class="card">
+      <h3>Confirmados:  <span><%= @summary['confirmed']['value']%> </span></h3>
+      <a class="btn btn-dark" href="/confirmado" >Visualizar</a>
+    </div>
 
-<p>Confirmados: <%= @summary['confirmed']['value']%> </p>
-<p>Recuperados: <%= @summary['recovered']['value']%> </p>
-<p>Mortos:      <%= @summary['deaths']['value']%> </p>
+    <div class="card">
+      <h3>Recuperados: <span><%= @summary['recovered']['value']%></span></h3>
+      <a class="btn btn-dark" href="/recuperado" >Visualizar</a>
+    </div>
+
+    <div class="card">
+      <h3>Mortos: <span><%= @summary['deaths']['value']%></span></h3>
+      <a class="btn btn-dark" href="/mortos" >Visualizar</a>
+    </div>
+
+    
+      
+  </div>
+
+</div>
+
+
